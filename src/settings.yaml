@@ -1,0 +1,38 @@
+rss:
+  sites:
+    'news.harvard.arts': 'https://news.harvard.edu/gazette/section/arts-humanities/feed'
+    'news.harvard.science': 'https://news.harvard.edu/gazette/section/science-technology/feed'
+    'news.mit.edu': 'https://news.mit.edu/rss/feed'
+
+logging:
+  level: INFO
+  path: './logs/feedparser.log'
+
+elasticsearch:
+  host: 'https://localhost'
+  port: 9200
+  connections_per_node: 32
+  user: admin
+  scheme: https
+  enabled: False
+
+postgresql:
+  dbname: pg_db
+  host: host.docker.internal
+  port: 5432
+  user: user
+  enabled: False
+
+pool:
+  thread:
+    workers: 32
+    sleep: 23
+
+key:
+  words:
+    - GPT
+    - AI
+    - ChatGPT
+    - ИИ
+    - engineer
+    - scince
