@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+    scanner:
+        build:
+            context: ./src
+        image: news-scanner
+        container_name: news-scanner
+        extra_hosts:
+          - "host.docker.internal:host-gateway"
+        restart: unless-stopped
+
+        command: ["python3", "main.py"]
